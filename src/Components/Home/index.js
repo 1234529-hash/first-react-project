@@ -46,167 +46,31 @@ const HomeComponent = ({ name, num }) => {
           </Link>
         </div>
         <div className="w-[90%] h-full overflow-y-auto">
-          <div className="flex ">
-            <div className="w-[60%] p-5">
-              <p className="text-xl font-bold">Heading</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="flex p-5 w-[40%] gap-5 flex-col">
-              <div className="h-24 flex justify-center items-center border-2">
-                AD
+          {[1, 2, 3, 4, 5, 6, 65, 4, 5, 4].map(() => (
+            <div className="flex ">
+              <div className="w-[60%] p-5">
+                <p className="text-xl font-bold">Heading</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+                  dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat.
+                </p>
               </div>
-              <div className="h-40 flex justify-center items-center border-2">
-                AD
-              </div>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-[60%] p-5">
-              <p className="text-xl font-bold">Heading</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="flex p-5 w-[40%] gap-5 flex-col">
-              <div className="h-24 flex justify-center items-center border-2">
-                AD
-              </div>
-              <div className="h-40 flex justify-center items-center border-2">
-                AD
+              <div className="flex p-5 w-[40%] gap-5 flex-col">
+                <div className="h-24 flex justify-center items-center border-2">
+                  AD
+                </div>
+                <div className="h-40 flex justify-center items-center border-2">
+                  AD
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex ">
-            <div className="w-[60%] p-5">
-              <p className="text-xl font-bold">Heading</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="flex p-5 w-[40%] gap-5 flex-col">
-              <div className="h-24 flex justify-center items-center border-2">
-                AD
-              </div>
-              <div className="h-40 flex justify-center items-center border-2">
-                AD
-              </div>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-[60%] p-5">
-              <p className="text-xl font-bold">Heading</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="flex p-5 w-[40%] gap-5 flex-col">
-              <div className="h-24 flex justify-center items-center border-2">
-                AD
-              </div>
-              <div className="h-40 flex justify-center items-center border-2">
-                AD
-              </div>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-[60%] p-5">
-              <p className="text-xl font-bold">Heading</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="flex p-5 w-[40%] gap-5 flex-col">
-              <div className="h-24 flex justify-center items-center border-2">
-                AD
-              </div>
-              <div className="h-40 flex justify-center items-center border-2">
-                AD
-              </div>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-[60%] p-5">
-              <p className="text-xl font-bold">Heading</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="flex p-5 w-[40%] gap-5 flex-col">
-              <div className="h-24 flex justify-center items-center border-2">
-                AD
-              </div>
-              <div className="h-40 flex justify-center items-center border-2">
-                AD
-              </div>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-[60%] p-5">
-              <p className="text-xl font-bold">Heading</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="flex p-5 w-[40%] gap-5 flex-col">
-              <div className="h-24 flex justify-center items-center border-2">
-                AD
-              </div>
-              <div className="h-40 flex justify-center items-center border-2">
-                AD
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
