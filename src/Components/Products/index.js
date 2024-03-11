@@ -1,4 +1,5 @@
 import React from "react";
+import ProductCard from "../../Shared/ProductCard";
 
 const Products = () => {
   const dummyProducts = [
@@ -88,7 +89,10 @@ const Products = () => {
 
   return (
     <div className="bg-gray-200 p-2 gap-5 grid grid-cols-4">
-      {dummyProducts.map((product) => {
+      {dummyProducts.map((item) => {
+        return <ProductCard p={item} />;
+      })}
+      {/* {dummyProducts.map((product) => {
         return (
           <div key={product.id} className=" bg-white p-2 rounded-xl">
             <img
@@ -100,7 +104,7 @@ const Products = () => {
             <p>{product.price}</p>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 };

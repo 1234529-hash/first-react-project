@@ -46,7 +46,7 @@ const HomeComponent = ({ name, num }) => {
           </Link>
         </div>
         <div className="w-[90%] h-full overflow-y-auto">
-          {[1, 2, 3, 4, 5, 6, 65, 4, 5, 4].map(() => (
+          {[1, 2, 3, 4, 5, 6, 65, 4, 5, 8].map(() => (
             <div className="flex ">
               <div className="w-[60%] p-5">
                 <p className="text-xl font-bold">Heading</p>
@@ -72,6 +72,14 @@ const HomeComponent = ({ name, num }) => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="p-5">
+        {/* <iframe src="https://www.flipkart.com/"></iframe> */}
+        <video
+          controls={false}
+          autoPlay
+          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        ></video>
       </div>
     </div>
   );
