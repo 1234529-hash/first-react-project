@@ -1,4 +1,5 @@
 import ArrayMapDemo from "../Components/ArrayMapDemo";
+import Counter from "../Components/Counter";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
 import Props from "../Components/Props";
@@ -35,5 +36,10 @@ export const routes = [
     id: 6,
     path: "/use-state",
     component: UseStateDemo,
+  },
+  {
+    id: 7,
+    path: "/counter",
+    component: Counter,
   },
 ];

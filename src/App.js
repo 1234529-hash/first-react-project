@@ -1,14 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import ArrayMapDemo from "./Components/ArrayMapDemo";
-import Props2 from "./Components/Porps2";
-import Products from "./Components/Products";
-import Props from "./Components/Props";
-import Home from "./Pages/Home";
 import { routes } from "./Routes";
 
 function App() {
-  console.log(routes);
+  // console.log(routes);
   return (
     <BrowserRouter>
       <Routes>
