@@ -5,7 +5,6 @@ const Counter = () => {
   const [color, setColor] = useState("red");
   const [textColor, setTextColor] = useState("black");
 
-  console.log(color);
   const colors = ["red", "blue", "yellow", "green", "grey"];
   return (
     <div
@@ -18,7 +17,7 @@ const Counter = () => {
       <div className="flex items-center gap-2">
         <button
           className="bg-green-500 p-2 rounded"
-          onClick={() => (count < 10 ? setCount(count + 1) : setCount(count))}
+          onClick={() => (count < 10 ? setCount(count + 3) : setCount(count))}
         >
           + Increment
         </button>
@@ -33,12 +32,34 @@ const Counter = () => {
           Reset
         </button>
       </div>
-      <div className="flex items-center gap-2">
-        {colors.map((i) => {
-          return <button onClick={() => setColor(i)}>{i}</button>;
-        })}
+      <div className="flex flex-col items-center gap-2">
+        <div className="flex gap-2">
+          {colors.map((i) => {
+            return (
+              <button
+                key={i}
+                style={{ background: i }}
+                onClick={() => setColor(i)}
+              >
+                {i}
+              </button>
+            );
+          })}
+        </div>
+        <div className="flex gap-2">
+          {colors.map((i) => {
+            return (
+              <button
+                key={i}
+                style={{ background: i }}
+                onClick={() => setTextColor(i)}
+              >
+                {i}
+              </button>
+            );
+          })}
+        </div>
       </div>
-      <button onClick={() => setTextColor("white")}>White</button>
     </div>
   );
 };

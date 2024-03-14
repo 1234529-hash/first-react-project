@@ -1,5 +1,6 @@
 import ArrayMapDemo from "../Components/ArrayMapDemo";
 import Counter from "../Components/Counter";
+import ImageGallery from "../Components/ImageGallery";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
 import Props from "../Components/Props";
@@ -41,5 +42,10 @@ export const routes = [
     id: 7,
     path: "/counter",
     component: Counter,
+  },
+  {
+    id: 8,
+    path: "/gallery",
+    component: ImageGallery,
   },
 ];
