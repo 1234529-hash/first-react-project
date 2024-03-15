@@ -4,6 +4,7 @@ import ImageGallery from "../Components/ImageGallery";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
 import Props from "../Components/Props";
+import UseEffectDemo from "../Components/UseEffectDemo";
 import UseStateDemo from "../Components/UseStateDemo";
 import Home from "../Pages/Home";
 
@@ -47,5 +48,10 @@ export const routes = [
     id: 8,
     path: "/gallery",
     component: ImageGallery,
+  },
+  {
+    id: 9,
+    path: "/use-effect",
+    component: UseEffectDemo,
   },
 ];
