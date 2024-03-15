@@ -3,7 +3,7 @@ import "./App.css";
 import { routes } from "./Routes";
 
 function App() {
-  // console.log(routes);
+  console.log(routes);
   return (
     <BrowserRouter>
       <Routes>
