@@ -5,6 +5,7 @@ import MUiComponents from "../Components/MUiComonents";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
 import Props from "../Components/Props";
+import PropsDemo3 from "../Components/PropsDemo3";
 import UseEffectDemo from "../Components/UseEffectDemo";
 import UseEffectDemo2 from "../Components/UseEffectDemo2";
 import UseStateDemo from "../Components/UseStateDemo";
@@ -65,5 +66,10 @@ export const routes = [
     id: 11,
     path: "/mui",
     component: MUiComponents,
+  },
+  {
+    id: 12,
+    path: "/props3",
+    component: PropsDemo3,
   },
 ];
