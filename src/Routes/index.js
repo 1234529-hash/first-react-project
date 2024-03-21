@@ -1,11 +1,13 @@
 import ArrayMapDemo from "../Components/ArrayMapDemo";
 import Counter from "../Components/Counter";
+import Destructuring from "../Components/Destructuring";
 import ImageGallery from "../Components/ImageGallery";
 import MUiComponents from "../Components/MUiComonents";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
 import Props from "../Components/Props";
 import PropsDemo3 from "../Components/PropsDemo3";
+import UseContext from "../Components/UseContext";
 import UseEffectDemo from "../Components/UseEffectDemo";
 import UseEffectDemo2 from "../Components/UseEffectDemo2";
 import UseStateDemo from "../Components/UseStateDemo";
@@ -71,5 +73,15 @@ export const routes = [
     id: 12,
     path: "/props3",
     component: PropsDemo3,
+  },
+  {
+    id: 13,
+    path: "/destructuring",
+    component: Destructuring,
+  },
+  {
+    id: 14,
+    path: "/use-context",
+    component: UseContext,
   },
 ];

@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Button, Drawer, Dialog } from "@mui/material";
+import {
+  Button,
+  Drawer,
+  Dialog,
+  List,
+  ListItem,
+  ListItemButton,
+} from "@mui/material";
 
 const MUiComponents = () => {
   const [open, setOpen] = useState(false);
@@ -14,8 +21,14 @@ const MUiComponents = () => {
         Open Dialog
       </Button>
 
-      <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
-        <div>uehfiuegwiugiu</div>
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+        <List>
+          <ListItem>Nav 1</ListItem>
+          <ListItemButton>Nav 1</ListItemButton>
+          <ListItemButton>Nav 1</ListItemButton>
+          <ListItemButton>Nav 1</ListItemButton>
+          <ListItemButton>Nav 1</ListItemButton>
+        </List>
       </Drawer>
 
       <Dialog open={isOpenDialog} onClose={() => setIsOpenDialog(false)}>

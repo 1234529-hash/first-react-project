@@ -6,7 +6,7 @@ const PropsDemo3 = () => {
   const str = "Aditya";
 
   return (
-    <div className="bg-[#f44336]">
+    <div>
       Main Component : {str}
       <Divider />
       <Component1 name={str} />
