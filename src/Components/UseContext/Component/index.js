@@ -11,9 +11,10 @@ const Component1 = () => {
 };
 
 const Component2 = () => {
+  const name = useContext(NameContext);
   return (
     <div>
-      <p>Component2</p>
+      <p>Component2 :{name}</p>
       <Component3 />
     </div>
   );
@@ -30,14 +31,14 @@ const Component3 = () => {
 
 const Component4 = () => {
   const data = useContext(NameContext);
-  console.log(data);
+  // console.log(data);
   return (
     <div className="flex gap-2">
       Component4
       {/* Without useContext */}
       {/* <NameContext.Consumer>
-        {(name) => {
-          return <p>{name}</p>;
+        {(name2) => {
+          return <p>{name2}</p>;
         }}
       </NameContext.Consumer> */}
       {/* With useContext */}
