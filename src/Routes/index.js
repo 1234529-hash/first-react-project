@@ -1,3 +1,4 @@
+import Addition from "../Components/Addition";
 import ArrayMapDemo from "../Components/ArrayMapDemo";
 import Counter from "../Components/Counter";
 import Destructuring from "../Components/Destructuring";
@@ -12,6 +13,7 @@ import UseEffectDemo from "../Components/UseEffectDemo";
 import UseEffectDemo2 from "../Components/UseEffectDemo2";
 import UseStateDemo from "../Components/UseStateDemo";
 import Home from "../Pages/Home";
+import Tabs from "../Tabs";
 
 export const routes = [
   {
@@ -83,5 +85,15 @@ export const routes = [
     id: 14,
     path: "/use-context",
     component: UseContext,
+  },
+  {
+    id: 15,
+    path: "/tabs",
+    component: Tabs,
+  },
+  {
+    id: 16,
+    path: "/addition",
+    component: Addition,
   },
 ];

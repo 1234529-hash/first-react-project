@@ -24,9 +24,9 @@ const ArrayMapDemo = () => {
         <p>{obj.name} </p>
       ))} */}
 
-      {/* {arrOfObj.map((obj) => (
+      {arrOfObj.map((obj) => (
         <p>Amir</p>
-      ))} */}
+      ))}
 
       {arrOfNum.map((num, index) => {
         return <p key={index}>{num}</p>;

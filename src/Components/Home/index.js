@@ -1,7 +1,12 @@
-import React from "react";
+import { Button, Dialog } from "@mui/material";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SignIn from "../../Authentication/SignIn";
+import SignUp from "../../Authentication/SignUp";
 
 const HomeComponent = ({ name, num }) => {
+  const [open, setOpen] = useState(false);
+  const [page, setPage] = useState("SignUp");
   // console.log(i.name);
   // console.log(i.num);
   // const obj = { name2: "Amir", num2: 12 };
@@ -16,15 +21,17 @@ const HomeComponent = ({ name, num }) => {
   // console.log(num);
   return (
     <div className="h-full">
-      <div className="flex gap-5 h-[5vh] items-center bg-black text-white ">
-        <button className="hover:bg-white hover:text-black p-2">Logo</button>
-        <button className="hover:bg-white hover:text-black p-2">Logo</button>
-        <button className="hover:bg-white hover:text-black p-2">Logo</button>
-        <button className="hover:bg-white hover:text-black p-2">Logo</button>
-        <button className="hover:bg-white hover:text-black p-2">Logo</button>
-        <button className="hover:bg-white hover:text-black p-2">Logo</button>
-        <button className="hover:bg-white hover:text-black p-2">Logo</button>
-        {/* <p>{i.name}</p> */}
+      <div className="flex justify-between gap-5 h-[5vh] items-center bg-black text-white px-5">
+        <div className="flex gap-5 items-center">
+          <button className="hover:bg-white hover:text-black p-2">Logo</button>
+          <button className="hover:bg-white hover:text-black p-2">Logo</button>
+          <button className="hover:bg-white hover:text-black p-2">Logo</button>
+          <button className="hover:bg-white hover:text-black p-2">Logo</button>
+          <button className="hover:bg-white hover:text-black p-2">Logo</button>
+          <button className="hover:bg-white hover:text-black p-2">Logo</button>
+          <button className="hover:bg-white hover:text-black p-2">Logo</button>
+        </div>
+        <button onClick={() => setOpen(true)}>Sign Up</button>
       </div>
       <div className="flex h-[95vh]">
         <div className="w-[10%] flex flex-col h-full bg-gray-200">
@@ -75,12 +82,36 @@ const HomeComponent = ({ name, num }) => {
       </div>
       <div className="p-5">
         {/* <iframe src="https://www.flipkart.com/"></iframe> */}
+
         <video
           controls={false}
           autoPlay
           src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         ></video>
       </div>
+      <Dialog open={open} onClose={() => setOpen(false)}>
+        <div className="w-96">
+          <div className="flex">
+            <Button
+              color={page === "SignUp" ? "success" : "primary"}
+              className="!w-full"
+              onClick={() => setPage("SignUp")}
+            >
+              Sign Up
+            </Button>
+            <Button
+              color={page === "SignIn" ? "success" : "primary"}
+              className="!w-full"
+              onClick={() => setPage("SignIn")}
+            >
+              Sign In
+            </Button>
+          </div>
+          {/* {page === "SignUp" ? <SignUp /> : <SignIn />} */}
+          {page === "SignUp" && <SignUp />}
+          {page === "SignIn" && <SignIn />}
+        </div>
+      </Dialog>
     </div>
   );
 };
