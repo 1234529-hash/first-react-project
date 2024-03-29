@@ -1,4 +1,4 @@
-import { Button, Dialog } from "@mui/material";
+import { Button, Dialog, Divider } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SignIn from "../../Authentication/SignIn";
@@ -83,15 +83,15 @@ const HomeComponent = ({ name, num }) => {
       <div className="p-5">
         {/* <iframe src="https://www.flipkart.com/"></iframe> */}
 
-        <video
+        {/* <video
           controls={false}
           autoPlay
-          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-        ></video>
+           src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        ></video> */}
       </div>
       <Dialog open={open} onClose={() => setOpen(false)}>
         <div className="w-96">
-          <div className="flex">
+          <div className="flex h-10">
             <Button
               color={page === "SignUp" ? "success" : "primary"}
               className="!w-full"
@@ -99,6 +99,7 @@ const HomeComponent = ({ name, num }) => {
             >
               Sign Up
             </Button>
+            <div className="h-full border" />
             <Button
               color={page === "SignIn" ? "success" : "primary"}
               className="!w-full"
@@ -107,6 +108,7 @@ const HomeComponent = ({ name, num }) => {
               Sign In
             </Button>
           </div>
+          <Divider />
           {/* {page === "SignUp" ? <SignUp /> : <SignIn />} */}
           {page === "SignUp" && <SignUp />}
           {page === "SignIn" && <SignIn />}

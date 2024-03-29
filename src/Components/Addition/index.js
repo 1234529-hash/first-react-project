@@ -5,7 +5,6 @@ const Addition = () => {
   const [firstNumber, setFirstNumber] = useState(0);
   const [secondNumber, setSecondNumber] = useState(0);
   const [result, setResult] = useState(0);
-  console.log(firstNumber);
 
   const handleAdd = () => {
     setResult(Number(firstNumber) + Number(secondNumber));
@@ -18,7 +17,10 @@ const Addition = () => {
           type="number"
           className="border p-2 outline-blue-500"
           placeholder="Enter First"
-          onChange={(e) => setFirstNumber(e.target.value)}
+          value={firstNumber}
+          onChange={(e) =>
+            e.target.value >= 0 && setFirstNumber(e.target.value)
+          }
         />
         <input
           type="number"
