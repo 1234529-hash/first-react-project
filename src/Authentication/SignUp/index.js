@@ -13,6 +13,7 @@ const SignUp = () => {
     setPhone("");
     setPassword("");
   };
+  //Controlled Method
   return (
     <div className="flex flex-col gap-5 p-5">
       <TextField

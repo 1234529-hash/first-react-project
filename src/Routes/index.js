@@ -3,6 +3,7 @@ import ArrayMapDemo from "../Components/ArrayMapDemo";
 import Counter from "../Components/Counter";
 import Destructuring from "../Components/Destructuring";
 import ImageGallery from "../Components/ImageGallery";
+import LightBulb from "../Components/LightBulb";
 import MUiComponents from "../Components/MUiComonents";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
@@ -95,5 +96,10 @@ export const routes = [
     id: 16,
     path: "/addition",
     component: Addition,
+  },
+  {
+    id: 17,
+    path: "/light",
+    component: LightBulb,
   },
 ];
