@@ -5,6 +5,7 @@ import Destructuring from "../Components/Destructuring";
 import ImageGallery from "../Components/ImageGallery";
 import LightBulb from "../Components/LightBulb";
 import MUiComponents from "../Components/MUiComonents";
+import MyPortfolio from "../Components/MyPortfolio";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
 import Props from "../Components/Props";
@@ -101,5 +102,10 @@ export const routes = [
     id: 17,
     path: "/light",
     component: LightBulb,
+  },
+  {
+    id: 18,
+    path: "/portfolio",
+    component: MyPortfolio,
   },
 ];
