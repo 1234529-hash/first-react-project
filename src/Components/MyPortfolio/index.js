@@ -85,7 +85,35 @@ const MyPortfolio = () => {
             <p>People are looking at your profile. Find out who.</p>
           </div>
         </div>
-        <div className="lg:w-1/2 bg-white min-h-screen"></div>
+        <div className="lg:w-1/2 flex flex-col gap-5 min-h-screen">
+          <div className="flex flex-col bg-white gap-2 p-4">
+            <p>Social Media template by w3.css</p>
+            <input
+              type="text"
+              className="p-2 border-2"
+              defaultValue="Status: Feeling Blue"
+            />
+            <button className="w-fit bg-black p-2 text-white">
+              <Edit /> <span className="px-1">Post</span>
+            </button>
+          </div>
+          <div className="bg-white gap-2 p-4">
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-3">
+                <Avatar /> <p>John Doe</p>
+              </div>
+              <p className="text-gray-500">1 min</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
         <div className="lg:w-[20%] bg-white min-h-screen"></div>
       </div>
     </>
