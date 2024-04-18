@@ -1,62 +1,74 @@
 import { Button, TextField } from "@mui/material";
+import { useFormik } from "formik";
 import React, { useState } from "react";
 
 const SignUp = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const handleSubmit = () => {
-    console.log({ name, email, phone, password });
-    setName("");
-    setEmail("");
-    setPhone("");
-    setPassword("");
-  };
-  //Controlled Method
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      password: "",
+      con_password: "",
+    },
+    onSubmit: () => {
+      console.log(formik.values);
+    },
+  });
+
+  const signUpData = [
+    {
+      name: "name",
+      label: "Name",
+      type: "text",
+    },
+    {
+      name: "email",
+      label: "Email",
+      type: "email",
+    },
+    {
+      name: "phone",
+      label: "Phone",
+      type: "number",
+    },
+    {
+      name: "password",
+      label: "Password",
+      type: "password",
+    },
+    {
+      name: "con_password",
+      label: "Confirm Password",
+      type: "password",
+    },
+    {
+      name: "address",
+      label: "Address",
+      type: "text",
+    },
+  ];
+
   return (
-    <div className="flex flex-col gap-5 p-5">
-      <TextField
-        size="small"
-        InputProps={{ className: "!rounded-full" }}
-        label="Name"
-        variant="outlined"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-      />
-      <TextField
-        size="small"
-        InputProps={{ className: "!rounded-full" }}
-        label="Email"
-        variant="outlined"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-      />
-      <TextField
-        size="small"
-        InputProps={{ className: "!rounded-full" }}
-        label="Phone"
-        value={phone}
-        variant="outlined"
-        onChange={(event) => setPhone(event.target.value)}
-      />
-      <TextField
-        type="password"
-        size="small"
-        InputProps={{ className: "!rounded-full" }}
-        label="Password"
-        variant="outlined"
-        value={password}
-        onChange={(event) => setPassword(event.target.value)}
-      />
-      <Button
-        variant="contained"
-        onClick={handleSubmit}
-        className="!rounded-full"
-      >
+    <form onSubmit={formik.handleSubmit} className="flex flex-col gap-5 p-5">
+      {signUpData.map((input) => {
+        return (
+          <TextField
+            key={input.name}
+            size="small"
+            name={input.name}
+            InputProps={{ className: "!rounded-full" }}
+            label={input.label}
+            value={formik.values[input.name]}
+            onChange={formik.handleChange}
+            variant="outlined"
+          />
+        );
+      })}
+      <Button type="submit" variant="contained" className="!rounded-full">
         Submit
       </Button>
-    </div>
+    </form>
   );
 };
 
