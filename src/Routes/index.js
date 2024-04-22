@@ -106,6 +106,6 @@ export const routes = [
   {
     id: 18,
     path: "/portfolio",
-    component: MyPortfolio,
+    component:MyPortfolio ,
   },
 ];

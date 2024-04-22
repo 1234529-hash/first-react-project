@@ -1,6 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import React from "react";
+import * as Yup from "yup";
 
 const SignUp = () => {
   const formik = useFormik({
@@ -10,11 +11,24 @@ const SignUp = () => {
       phone: "",
       password: "",
       con_password: "",
+      address: "",
     },
+
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .required("Name is Required")
+        .min(2, "Name must be two charecter."),
+      email: Yup.string().email().required(),
+      phone: Yup.string().required().min(10).max(13),
+    }),
     onSubmit: () => {
       console.log(formik.values);
+      formik.resetForm();
     },
   });
+
+  // console.log(formik.errors);
+  // console.log(formik.isValid);
 
   const signUpData = [
     {
@@ -56,16 +70,25 @@ const SignUp = () => {
           <TextField
             key={input.name}
             size="small"
+            type={input.type}
             name={input.name}
             InputProps={{ className: "!rounded-full" }}
             label={input.label}
+            error={Boolean(formik.errors[input.name])}
             value={formik.values[input.name]}
+            helperText={formik.errors[input.name]}
             onChange={formik.handleChange}
             variant="outlined"
           />
         );
       })}
-      <Button type="submit" variant="contained" className="!rounded-full">
+
+      <Button
+        disabled={!formik.isValid}
+        type="submit"
+        variant="contained"
+        className="!rounded-full"
+      >
         Submit
       </Button>
     </form>
