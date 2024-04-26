@@ -28,7 +28,7 @@ const SignUp = () => {
   });
 
   // console.log(formik.errors);
-  // console.log(formik.isValid);
+  //console.log(formik.isValid);
 
   const signUpData = [
     {
@@ -84,7 +84,7 @@ const SignUp = () => {
       })}
 
       <Button
-        disabled={!formik.isValid}
+        disabled={formik.isValid}
         type="submit"
         variant="contained"
         className="!rounded-full"

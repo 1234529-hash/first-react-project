@@ -14,6 +14,7 @@ import UseContext from "../Components/UseContext";
 import UseEffectDemo from "../Components/UseEffectDemo";
 import UseEffectDemo2 from "../Components/UseEffectDemo2";
 import UseStateDemo from "../Components/UseStateDemo";
+import FormikDemo from "../Fomik";
 import Home from "../Pages/Home";
 import Tabs from "../Tabs";
 
@@ -106,6 +107,11 @@ export const routes = [
   {
     id: 18,
     path: "/portfolio",
-    component:MyPortfolio ,
+    component: MyPortfolio,
+  },
+  {
+    id: 19,
+    path: "/formik",
+    component: FormikDemo,
   },
 ];
