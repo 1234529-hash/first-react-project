@@ -19,6 +19,10 @@ const FormikDemo = () => {
     },
   });
 
+  // const user = { name: "Kuch", designation: "Frontend Developer" };
+
+  // send { name:"Kuch", designation: "Frontend Developer" }
+
   console.log(formik.errors, "formik.errors");
 
   console.log(formik.errors.first_name);
