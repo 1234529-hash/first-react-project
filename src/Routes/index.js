@@ -1,5 +1,8 @@
 import Addition from "../Components/Addition";
 import ArrayMapDemo from "../Components/ArrayMapDemo";
+import Blogs from "../Components/Blogs";
+import Blogs2 from "../Components/Blogs2";
+import Blogs3 from "../Components/Blogs3";
 import Counter from "../Components/Counter";
 import Destructuring from "../Components/Destructuring";
 import ImageGallery from "../Components/ImageGallery";
@@ -113,5 +116,20 @@ export const routes = [
     id: 19,
     path: "/formik",
     component: FormikDemo,
+  },
+  {
+    id: 20,
+    path: "/blogs",
+    component: Blogs,
+  },
+  {
+    id: 21,
+    path: "/blogs2",
+    component: Blogs2,
+  },
+  {
+    id: 22,
+    path: "/blogs3",
+    component: Blogs3,
   },
 ];
