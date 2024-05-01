@@ -17,6 +17,7 @@ import UseContext from "../Components/UseContext";
 import UseEffectDemo from "../Components/UseEffectDemo";
 import UseEffectDemo2 from "../Components/UseEffectDemo2";
 import UseStateDemo from "../Components/UseStateDemo";
+import Users from "../Components/Users";
 import FormikDemo from "../Fomik";
 import Home from "../Pages/Home";
 import Tabs from "../Tabs";
@@ -131,5 +132,10 @@ export const routes = [
     id: 22,
     path: "/blogs3",
     component: Blogs3,
+  },
+  {
+    id: 23,
+    path: "/users",
+    component: Users,
   },
 ];
