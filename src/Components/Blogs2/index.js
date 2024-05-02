@@ -19,7 +19,7 @@ const Blogs2 = () => {
     //   .then((data) => {
     //     setBlogs(data);
     //     setIsLoading(false);
-    //   });
+    // });
   };
 
   useEffect(() => {

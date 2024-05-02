@@ -1,4 +1,5 @@
 import {
+  Button,
   Table,
   TableBody,
   TableCell,
@@ -14,6 +15,7 @@ import { axiosInstance } from "../../Config/axios";
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
+  const [limit, setLimit] = useState(10);
 
   //Promises
   //   const getUsersFn = () => {
@@ -30,13 +32,14 @@ const Users = () => {
   //   };
 
   const getUsersFn = async () => {
-    const response = await axiosInstance.get(`users/search?q=${search}`);
+    const response = await axiosInstance.get(`users?limit=${limit}&skip=10`);
+    console.log(response);
     setUsers(response.data.users);
   };
 
   useEffect(() => {
     getUsersFn();
-  }, [search]);
+  }, [search, limit]);
 
   return (
     <div className="">
@@ -98,6 +101,9 @@ const Users = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      <div className="flex justify-center p-2">
+        <Button onClick={() => setLimit(limit + 10)}>Load More</Button>
+      </div>
     </div>
   );
 };

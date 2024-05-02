@@ -1,3 +1,4 @@
+import Register from "../Authentication/Register";
 import Addition from "../Components/Addition";
 import ArrayMapDemo from "../Components/ArrayMapDemo";
 import Blogs from "../Components/Blogs";
@@ -137,5 +138,10 @@ export const routes = [
     id: 23,
     path: "/users",
     component: Users,
+  },
+  {
+    id: 24,
+    path: "/register",
+    component: Register,
   },
 ];

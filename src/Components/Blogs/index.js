@@ -12,6 +12,7 @@ const Blogs = () => {
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);
+        console.log(data); 
         setIsLoading(false);
       });
   };
