@@ -1,27 +1,48 @@
-import { Button, Dialog, Divider } from "@mui/material";
+import { Avatar, Button, Dialog, Divider, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SignIn from "../../Authentication/SignIn";
 import SignUp from "../../Authentication/SignUp";
 
-const HomeComponent = ({ name, num }) => {
+const HomeComponent = ({ num }) => {
   const [open, setOpen] = useState(false);
   const [page, setPage] = useState("SignUp");
+
+  //Menu for Profile Information
+  const [anchorEl, setAnchorEl] = useState(null);
+  const isOpen = Boolean(anchorEl);
+
+  console.log(isOpen);
+
+  const navigate = useNavigate();
   // console.log(i.name);
   // console.log(i.num);
   // const obj = { name2: "Amir", num2: 12 };
 
   // const { name, num } = i;
 
-  console.log(name, num);
+  // console.log(name, num);
+  // console.log(localStorage.getItem("token"));
+  // console.log(localStorage.getItem("name"));
+
+  //Get User Data from LocalStorage
+  const token = localStorage.getItem("token");
+  const name = localStorage.getItem("name");
 
   // console.log(name2);
   // console.log(num2);
   // console.log(name);
   // console.log(num);
+
+  //Logut User and Clear The Local Storage
+  const handleLogout = () => {
+    localStorage.clear();
+    setAnchorEl(null);
+  };
+
   return (
     <div className="h-full">
-      <div className="flex justify-between gap-5 h-[5vh] items-center bg-black text-white px-5">
+      <div className="flex justify-between gap-5 p-2 items-center bg-black text-white px-5">
         <div className="flex gap-5 items-center">
           <button className="hover:bg-white hover:text-black p-2">Logo</button>
           <button className="hover:bg-white hover:text-black p-2">Logo</button>
@@ -31,7 +52,16 @@ const HomeComponent = ({ name, num }) => {
           <button className="hover:bg-white hover:text-black p-2">Logo</button>
           <button className="hover:bg-white hover:text-black p-2">Logo</button>
         </div>
-        <button onClick={() => setOpen(true)}>Sign Up</button>
+        {/* Condion of is Login */}
+        {token ? (
+          <Avatar
+            src="jgjg"
+            alt={name}
+            onClick={(event) => setAnchorEl(event.currentTarget)}
+          />
+        ) : (
+          <button onClick={() => navigate("/login")}>Login</button>
+        )}
       </div>
       <div className="flex h-[95vh]">
         <div className="w-[10%] flex flex-col h-full bg-gray-200">
@@ -114,6 +144,14 @@ const HomeComponent = ({ name, num }) => {
           {page === "SignIn" && <SignIn />}
         </div>
       </Dialog>
+      {/* Menu for Profile Information */}
+      <Menu anchorEl={anchorEl} open={isOpen} onClose={() => setAnchorEl(null)}>
+        <MenuItem className="!flex !flex-col gap-2">
+          <Avatar src="guygliu" alt={name} />
+          <p>{name}</p>
+        </MenuItem>
+        <MenuItem onClick={handleLogout}>Logout</MenuItem>
+      </Menu>
     </div>
   );
 };
