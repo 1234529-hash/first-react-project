@@ -5,12 +5,17 @@ import ArrayMapDemo from "../Components/ArrayMapDemo";
 import Blogs from "../Components/Blogs";
 import Blogs2 from "../Components/Blogs2";
 import Blogs3 from "../Components/Blogs3";
+import LocalStorage, {
+  BrowserStorageByHook,
+} from "../Components/BrowserStorage";
+import BrowserStorage, { SessionStorage } from "../Components/BrowserStorage";
 import Counter from "../Components/Counter";
 import Destructuring from "../Components/Destructuring";
 import ImageGallery from "../Components/ImageGallery";
 import LightBulb from "../Components/LightBulb";
 import MUiComponents from "../Components/MUiComonents";
 import MyPortfolio from "../Components/MyPortfolio";
+import PersistForm from "../Components/PersistForm";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
 import Props from "../Components/Props";
@@ -149,5 +154,25 @@ export const routes = [
     id: 25,
     path: "/login",
     component: Login,
+  },
+  {
+    id: 25,
+    path: "/browser-storage/local",
+    component: LocalStorage,
+  },
+  {
+    id: 26,
+    path: "/browser-storage/session",
+    component: SessionStorage,
+  },
+  {
+    id: 27,
+    path: "/browser-storage/hooks",
+    component: BrowserStorageByHook,
+  },
+  {
+    id: 28,
+    path: "/persist-form",
+    component: PersistForm,
   },
 ];
