@@ -11,7 +11,8 @@ const Blogs3 = () => {
     setIsLoading(true);
 
     const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
+      "https://api-eduvila.onrender.com/profile",
+      { params: { token: localStorage.getItem("token") } }
     );
 
     setBlogs(response.data);
@@ -32,7 +33,7 @@ const Blogs3 = () => {
   console.log(blogs);
   return (
     <div>
-      {isLoading ? (
+      {/* {isLoading ? (
         <div className="flex flex-col items-center h-96 justify-center">
           <CircularProgress />
         </div>
@@ -92,7 +93,7 @@ const Blogs3 = () => {
             </div>
           </div>
         </section>
-      )}
+      )} */}
     </div>
   );
 };

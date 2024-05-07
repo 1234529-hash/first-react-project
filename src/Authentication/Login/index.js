@@ -9,15 +9,20 @@ const Login = () => {
   //   https://api-eduvila.onrender.com/login
   //   email: "mohdamirkhan696@gmail.com";
   //   password: "123456";
+
+  //https://api-eduvila.onrender.com/profile
+
   const navigate = useNavigate();
   const loginFn = async (email, password) => {
     const response = await axios.post(
       "https://api-eduvila.onrender.com/login",
+
       { email: email, password: password }
     );
     console.log(response.data);
     localStorage.setItem("token", response.data[0].token);
     localStorage.setItem("name", response.data[0].name);
+    localStorage.setItem("user_id", response.data[0].id);
     alert(response.data);
     navigate("/");
   };

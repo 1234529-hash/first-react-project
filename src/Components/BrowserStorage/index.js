@@ -17,7 +17,7 @@ const LocalStorage = () => {
         {/* <Button
           onClick={() => {
             localStorage.removeItem("name");
-            localStorage.removeItem("name2");
+             localStorage.removeItem("name2");
           }}
         >
           Remove Item
