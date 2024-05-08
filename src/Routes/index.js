@@ -1,4 +1,5 @@
 import Login from "../Authentication/Login";
+import Profile from "../Authentication/Profile";
 import Register from "../Authentication/Register";
 import Addition from "../Components/Addition";
 import ArrayMapDemo from "../Components/ArrayMapDemo";
@@ -174,5 +175,10 @@ export const routes = [
     id: 28,
     path: "/persist-form",
     component: PersistForm,
+  },
+  {
+    id: 29,
+    path: "/profile",
+    component: Profile,
   },
 ];

@@ -7,7 +7,6 @@ import SignUp from "../../Authentication/SignUp";
 const HomeComponent = ({ num }) => {
   const [open, setOpen] = useState(false);
   const [page, setPage] = useState("SignUp");
-
   //Menu for Profile Information
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
@@ -150,6 +149,7 @@ const HomeComponent = ({ num }) => {
           <Avatar src="guygliu" alt={name} />
           <p>{name}</p>
         </MenuItem>
+        <MenuItem onClick={() => navigate("/profile")}>Profile</MenuItem>
         <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
     </div>

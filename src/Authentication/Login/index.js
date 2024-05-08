@@ -16,7 +16,6 @@ const Login = () => {
   const loginFn = async (email, password) => {
     const response = await axios.post(
       "https://api-eduvila.onrender.com/login",
-
       { email: email, password: password }
     );
     console.log(response.data);
