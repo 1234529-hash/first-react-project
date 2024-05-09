@@ -1,5 +1,6 @@
 import Login from "../Authentication/Login";
 import Profile from "../Authentication/Profile";
+import UpdateProfile from "../Authentication/Profile/UpdateProfile";
 import Register from "../Authentication/Register";
 import Addition from "../Components/Addition";
 import ArrayMapDemo from "../Components/ArrayMapDemo";
@@ -180,5 +181,10 @@ export const routes = [
     id: 29,
     path: "/profile",
     component: Profile,
+  },
+  {
+    id: 29,
+    path: "/update-profile",
+    component: UpdateProfile,
   },
 ];
