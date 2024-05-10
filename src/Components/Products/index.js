@@ -1,9 +1,10 @@
 import { Rating } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
-
+  const navigate = useNavigate();
   const getProductsFn = () => {
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
@@ -24,7 +25,11 @@ const Products = () => {
       })} */}
       {data.map((product) => {
         return (
-          <div key={product.id} className=" bg-white p-2 rounded-xl">
+          <div
+            key={product.id}
+            className=" bg-white p-2 rounded-xl"
+            onClick={() => navigate(`/product/${product.id}`)}
+          >
             <img
               src={product.thumbnail}
               alt=""

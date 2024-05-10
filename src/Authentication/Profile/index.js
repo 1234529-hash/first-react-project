@@ -34,7 +34,7 @@ const Profile = () => {
       <p>{data?.id}</p>
       <p>{data?.gender}</p>
       <p>{data?.zipcode}</p>
-      <p>{data?.dob}</p>
+      <p>{data?.dob?.slice(0, 10)}</p>
       <p>{data?.country}</p>
       <p>{data?.state}</p>
       <p>{data?.city}</p>

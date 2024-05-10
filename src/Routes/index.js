@@ -20,6 +20,7 @@ import MyPortfolio from "../Components/MyPortfolio";
 import PersistForm from "../Components/PersistForm";
 import Props2 from "../Components/Porps2";
 import Products from "../Components/Products";
+import ProductDetail from "../Components/Products/ProductDetail";
 import Props from "../Components/Props";
 import PropsDemo3 from "../Components/PropsDemo3";
 import UseContext from "../Components/UseContext";
@@ -186,5 +187,10 @@ export const routes = [
     id: 29,
     path: "/update-profile",
     component: UpdateProfile,
+  },
+  {
+    id: 30,
+    path: "/product/:product_id",
+    component: ProductDetail,
   },
 ];

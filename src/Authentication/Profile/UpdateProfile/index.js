@@ -7,15 +7,18 @@ import { useNavigate } from "react-router-dom";
 const UpdateProfile = () => {
   const [data, setData] = useState({});
   const navigate = useNavigate();
+
   const getProfileFn = async () => {
     const response = await axios.get(
       "https://api-eduvila.onrender.com/profile",
       { params: { token: localStorage.getItem("token") } }
     );
+    console.log(response);
     setData(response.data[0]);
   };
 
   const updateProfileFn = async (values) => {
+    console.log(values);
     const response = await axios.put(
       "https://api-eduvila.onrender.com/profile",
       { ...values, id: data?.id }
@@ -28,6 +31,7 @@ const UpdateProfile = () => {
   }, []);
 
   console.log(data);
+
   const initialValues = {
     city: data?.city || "",
     country: data?.country || "",
