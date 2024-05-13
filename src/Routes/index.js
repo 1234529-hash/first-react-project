@@ -12,6 +12,8 @@ import LocalStorage, {
 } from "../Components/BrowserStorage";
 import BrowserStorage, { SessionStorage } from "../Components/BrowserStorage";
 import Counter from "../Components/Counter";
+import CourseDetail from "../Components/CourseDetail";
+import Courses from "../Components/Courses";
 import Destructuring from "../Components/Destructuring";
 import ImageGallery from "../Components/ImageGallery";
 import LightBulb from "../Components/LightBulb";
@@ -192,5 +194,15 @@ export const routes = [
     id: 30,
     path: "/product/:product_id",
     component: ProductDetail,
+  },
+  {
+    id: 31,
+    path: "/courses",
+    component: Courses,
+  },
+  {
+    id: 31,
+    path: "/courses/:course_id",
+    component: CourseDetail,
   },
 ];
