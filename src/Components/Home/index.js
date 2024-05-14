@@ -65,8 +65,11 @@ const HomeComponent = ({ num }) => {
       <div className="flex h-[95vh]">
         <div className="w-[10%] flex flex-col h-full bg-gray-200">
           <p className="p-3">Menu</p>
-          <Link className="hover:bg-black p-2 w-full hover:text-white">
-            Link 1
+          <Link
+            to="/courses-list"
+            className="hover:bg-black p-2 w-full hover:text-white"
+          >
+            Cources
           </Link>
           <Link className="hover:bg-black p-2 w-full hover:text-white">
             Link 1

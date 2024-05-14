@@ -8,9 +8,9 @@ const Courses = () => {
 
   const getCoursesFn = async () => {
     const response = await axios.get(
-      "https://api-eduvila.onrender.com/courses",
-      { params: { id: "jihihi" } }
+      "https://api-eduvila.onrender.com/courses"
     );
+    console.log(response.data);
     setData(response.data);
   };
 
@@ -24,6 +24,7 @@ const Courses = () => {
         return (
           <div onClick={() => navigate(`/courses/${course.id}`)}>
             {course.heading}
+            <img src={course.image_url} alt="" />
           </div>
         );
       })}

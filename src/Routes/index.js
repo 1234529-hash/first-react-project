@@ -13,6 +13,7 @@ import LocalStorage, {
 import BrowserStorage, { SessionStorage } from "../Components/BrowserStorage";
 import Counter from "../Components/Counter";
 import CourseDetail from "../Components/CourseDetail";
+import CourseList from "../Components/CourseList";
 import Courses from "../Components/Courses";
 import Destructuring from "../Components/Destructuring";
 import ImageGallery from "../Components/ImageGallery";
@@ -204,5 +205,10 @@ export const routes = [
     id: 31,
     path: "/courses/:course_id",
     component: CourseDetail,
+  },
+  {
+    id: 31,
+    path: "/courses-list",
+    component: CourseList,
   },
 ];
